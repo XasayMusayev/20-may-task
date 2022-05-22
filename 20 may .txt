@@ -1,0 +1,56 @@
+using System;
+
+namespace ConsoleApp18
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var xasay = new Student
+            {
+                ProjectGrades = 100,
+                HomeworkGrades = 99,
+                FinalGrade = 99,
+                Davamiyyet = 30,
+            };
+
+            xasay.Result();   
+        }
+    }
+
+    class Student
+    {
+        public int HomeworkGrades;
+
+        public int ProjectGrades;
+
+        public int FinalGrade;
+
+        public int Davamiyyet;
+        
+
+        public void Result()
+        {
+            double netice = 0.25 * ProjectGrades + 0.25 * HomeworkGrades + 0.1 * Davamiyyet + 0.4 * FinalGrade;
+
+            if (netice > 90)
+            {
+                Console.WriteLine("HighHonour");
+            }
+            else if (netice > 80)
+            {
+                Console.WriteLine("Honour");
+
+            }
+            else { Console.WriteLine("Normal"); }
+
+        }
+
+       
+
+        
+    }
+
+}
+

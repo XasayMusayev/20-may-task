@@ -1,0 +1,34 @@
+using System;
+
+namespace ConsoleApp23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] array = { "xasay", "ismayil" };
+            char a = 'x';
+            Array(array, 'l');
+        }
+        public static void Array(string[] array,char a)
+        {
+            int count;
+            for (int i = 0; i < array.Length; i++)
+            {
+                count = 0;
+                for (int j = 0; j <array[i].Length; j++)
+                {
+                    if (a == array[i][j])
+                    {
+                        count++;
+                        if (count > 1)
+                        {
+                            continue;
+                        }
+                        Console.WriteLine(array[i]);
+                    }
+                }
+            }
+        }
+    }
+}
